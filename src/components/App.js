@@ -5,9 +5,9 @@ import Data from "../data";
 
 const App = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [prevButtonDisabled, setPrevButtonDisabled] = useState(false);
+  const [prevButtonDisabled, setPrevButtonDisabled] = useState(true);
   const [nextButtonDisabled, setNextButtonDisabled] = useState(false);
-  const [restartButtonDisabled, setRestartButtonDisabled] = useState(false);
+  const [restartButtonDisabled, setRestartButtonDisabled] = useState(true);
   const [slides, setSlides] = useState(Data);
 
   const nextSlide = () => {
