@@ -62,7 +62,7 @@ const App = () => {
       <div id='navigation'>
         <button data-testid="button-prev"
           onClick={prevSlide}
-          disabled
+          disabled={prevButtonDisabled}
         >
           Prev
         </button>
@@ -76,7 +76,7 @@ const App = () => {
 
         <button data-testid="button-restart"
           onClick={restartSlide}
-          disabled
+          disabled={restartButtonDisabled}
         >
           Restart
         </button>
