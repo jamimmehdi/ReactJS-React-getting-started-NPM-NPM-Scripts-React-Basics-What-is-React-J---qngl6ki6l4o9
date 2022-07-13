@@ -2,14 +2,11 @@ import '../styles/App.css';
 import React, { Component, useEffect, useState } from "react";
 import Slides from "./Slides"
 
-import Data from "../data";
-
-const App = () => {
+const App = ({slides}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [prevButtonDisabled, setPrevButtonDisabled] = useState(true);
   const [nextButtonDisabled, setNextButtonDisabled] = useState(false);
   const [restartButtonDisabled, setRestartButtonDisabled] = useState(true);
-  const [slides] = useState(Data);
 
   const nextSlide = () => {
     if (currentSlide < slides.length - 1) {
