@@ -1,7 +1,7 @@
 import '../styles/App.css';
 import React, { Component, useEffect, useState } from "react";
 import Slides from "./Slides";
-import Data from "./data";
+import Data from "../data";
 
 const App = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
