@@ -45,7 +45,7 @@ const App = () => {
 
     // Restart button disable
     if (currentSlide === 0) {
-        setRestartButtonDisabled(true);
+      setRestartButtonDisabled(true);
     } else {
       setRestartButtonDisabled(false);
     }
@@ -59,26 +59,28 @@ const App = () => {
         text={slides[currentSlide].text}
       />
 
-      <button data-testid="button-prev"
-      onClick={prevSlide}
-      disabled={prevButtonDisabled}
-      >
-        Prev
-      </button>
+      <div id='navigation'>
+        <button data-testid="button-prev"
+          onClick={prevSlide}
+          disabled={prevButtonDisabled}
+        >
+          Prev
+        </button>
 
-      <button data-testid="button-next"
-      onClick={nextSlide}
-      disabled={nextButtonDisabled}
-      >
-        Next
-      </button>
+        <button data-testid="button-next"
+          onClick={nextSlide}
+          disabled={nextButtonDisabled}
+        >
+          Next
+        </button>
 
-      <button data-testid="button-restart"
-      onClick={restartSlide}
-      disabled={restartButtonDisabled}
-      >
-        Restart
-      </button>
+        <button data-testid="button-restart"
+          onClick={restartSlide}
+          disabled={restartButtonDisabled}
+        >
+          Restart
+        </button>
+      </div>
     </div>
   );
 };
