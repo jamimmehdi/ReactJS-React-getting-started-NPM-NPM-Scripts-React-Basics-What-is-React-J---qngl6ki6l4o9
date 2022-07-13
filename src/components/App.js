@@ -1,6 +1,6 @@
 import '../styles/App.css';
 import React, { Component, useEffect, useState } from "react";
-import Slides from "./Slides";
+
 import Data from "../data";
 
 const App = () => {
@@ -54,10 +54,10 @@ const App = () => {
 
   return (
     <div>
-      <Slides
-        title={slides[currentSlide].title}
-        text={slides[currentSlide].text}
-      />
+      <div id="slide">
+        <h1 data-testid="title">{slides[currentSlide].title}</h1>
+        <p data-testid="text">{slides[currentSlide].text}</p>
+      </div>
 
       <div id='navigation'>
         <button data-testid="button-prev"
