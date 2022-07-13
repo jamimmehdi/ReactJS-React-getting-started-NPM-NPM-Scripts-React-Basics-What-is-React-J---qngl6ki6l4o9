@@ -55,8 +55,8 @@ const App = () => {
   return (
     <div>
       <div id="slide">
-        <h1 data-testid="title">{slides[currentSlide].title}</h1>
-        <p data-testid="text">{slides[currentSlide].text}</p>
+        <h1 data-testid="title">{slides[0].title}</h1>
+        <p data-testid="text">{slides[0].text}</p>
       </div>
 
       <div id='navigation'>
