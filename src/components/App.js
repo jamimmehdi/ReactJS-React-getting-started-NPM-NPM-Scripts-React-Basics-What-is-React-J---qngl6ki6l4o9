@@ -8,7 +8,7 @@ const App = () => {
   const [prevButtonDisabled, setPrevButtonDisabled] = useState(true);
   const [nextButtonDisabled, setNextButtonDisabled] = useState(false);
   const [restartButtonDisabled, setRestartButtonDisabled] = useState(true);
-  const [slides, setSlides] = useState(Data);
+  const [slides] = useState(Data);
 
   const nextSlide = () => {
     if (currentSlide < slides.length - 1) {
@@ -55,14 +55,14 @@ const App = () => {
   return (
     <div>
       <div id="slide">
-        <h1 data-testid="title">{slides[0].title}</h1>
-        <p data-testid="text">{slides[0].text}</p>
+        <h1 data-testid="title">{slides[currentSlide].title}</h1>
+        <p data-testid="text">{slides[currentSlide].text}</p>
       </div>
 
       <div id='navigation'>
         <button data-testid="button-prev"
           onClick={prevSlide}
-          disabled={prevButtonDisabled}
+          disabled
         >
           Prev
         </button>
@@ -76,7 +76,7 @@ const App = () => {
 
         <button data-testid="button-restart"
           onClick={restartSlide}
-          disabled={restartButtonDisabled}
+          disabled
         >
           Restart
         </button>
